@@ -10,6 +10,12 @@ export class Game extends Scene {
 
     this.add.image(1920, 384, "background").setAlpha(0.5);
 
+    fetch("https://a25.onrender.com/api/bicicletas")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+
     this.add
       .text(512, 384, "Juegazo", {
         fontFamily: "Arial Black",
